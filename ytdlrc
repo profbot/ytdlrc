@@ -203,7 +203,7 @@ get_video_value() {
 
 download_all_the_things() {
   # shellcheck disable=SC2086
-  youtube-dl \
+  youtube-dlc \
     --force-ipv4 \
     --continue \
     --download-archive "$ytdl_archive_list" \
@@ -220,7 +220,7 @@ download_all_the_things() {
     --restrict-filenames \
     --write-description \
     --write-info-json \
-    --write-thumbnail \
+    --write-all-thumbnails \
     "$ytdl_debug_flags" \
     $ytdl_subtitle_flags \
     $ytdl_xattrs_flag \
